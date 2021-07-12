@@ -13,17 +13,13 @@ clicked.addEventListener("click", () => {
   } else if (answer.trim() == "") {
     document.getElementById("reply").innerHTML = `Please enter a number!`;
   } else if (answer > 100 || answer < 0) {
-    document.getElementById(
-      "reply"
-    ).innerHTML = `The number must be between 0 and 100`;
+    document.getElementById("reply").innerHTML = `The number must be between 0 and 100`;
   } else if (answer > number) {
     counter++;
-    document.getElementById("reply").innerHTML = `It is incorrect
-        Please decrease the value you entered`;
+    document.getElementById("reply").innerHTML = `It is incorrect! Please decrease the value you entered`;
   } else if (answer < number) {
     counter++;
-    document.getElementById("reply").innerHTML = `It is incorrect
-        Please increase the value you entered`;
+    document.getElementById("reply").innerHTML = `It is incorrect! Please increase the value you entered`;
   } else {
     counter++;
     if (counter <= 3) {
